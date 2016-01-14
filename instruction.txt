@@ -1,0 +1,34 @@
+
+i am assuming that we are writing client and server separately
+step 2 : strt server
+'a' key of my tablet is not working so plese excuse me for tht
+:D
+server will be running on an ip and port number
+and accepting the connections from clients
+anshul • 10/13/15, 9:46 PM
+Shubham Malik
+Okay
+Accept() method is guess comes in play here.
+Shubham • 10/13/15, 9:47 PM
+anshul jain (anshul@osahub.com)
+step 3 :  run client nd enter ip nd port number to connect to the server
+step 4 : server will send   a list of files it is hving to the clients as they will connect
+lter on we cn even show icons like dropbox
+step 5 : client will enter nme of  file it wnt to downlod
+now the important prt
+step 6 : upon receiving the req, server wil not simply strt sending the file to the client but it will first check for if file exists on client side... if it does exists then check the file size nd if it is of sme size then send hsh of source file to client nd if hsh mtches on client side then stop the process or else strt the trnsfer....if file doesnot exists then lso strt the trnsfer
+note : there re three cses in which we will hve to trnsfer the files
+1. no file at client side
+2. file exists but size less then source file.... then we hve to RESUME the trnsfer
+3. file exists, sme size but currupted (hsh does not mtches)... in this cse as  well  we will RESUME the file trnsfer from where the dta is currupted
+now next big questions is tht how we will judge from where to resume nd on wht bsis
+anshul • 10/13/15, 10:02 PM
+Shubham Malik
+Md4?
+Shubham • 10/13/15, 10:02 PM
+anshul jain (anshul@osahub.com)
+as you guys must hve studied RSYNC
+anshul • 10/13/15, 10:02 PM
+Shubham Malik
+Yes
+The initial step from where we started

@@ -1,0 +1,7 @@
+1) user name password for accessibility and saving the data for a specified person(later)
+2) client and server and md5 code available
+
+Procedure rough
+1)connect client and server
+2)ask for file aur folder name to be uploaded
+3)check whether file exists in database or not. if it does not,start the upload completely.
